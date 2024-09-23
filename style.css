@@ -1,0 +1,177 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Body Styles */
+body {
+    background-color: pink;
+    font-size: 10px;
+    color: #000;
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Dashboard (Navigation) */
+#dashboard img {
+   height: 2.5rem;
+   
+}
+
+#dashboard {
+    display: flex;
+    justify-content: space-around; /* Distributes space between items */
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0, auto;
+   
+}
+
+/* Navigation Links */
+#dashboard a {
+    margin-top: 20px 0px;
+    text-decoration: none;
+    color: rgb(38, 37, 37);
+    font-weight: 700;
+    font-size: 10px;
+    margin-right: 0%;
+    width: 40%;
+    padding: 0.5rem, 1rem;
+    letter-spacing: 0.0875rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+/* "Sign In" Button */
+#dashboard #sign {
+    margin-right: 0px;
+    margin-left: 0px;
+    border: 1px solid black;
+    text-transform: capitalize;
+    border-radius: 30px;
+    margin-top: 7px;
+    padding: 0px 10px;
+    height: 20px;
+    width: 40px;
+    text-align: center;
+    display: inline;
+    line-height: 20px;
+}
+
+/* Hover Effects for Sign and Join */
+#dashboard #sign:hover {
+    opacity: 0.75;
+}
+
+#dashboard #join:hover {
+    opacity: 0.8;
+}
+
+/* "Find Store" Link */
+#dashboard #find {
+    margin-left: 40%;
+    text-transform: capitalize;
+}
+
+/* "Join" Button */
+#dashboard #join {
+    margin-right: 0px;
+    margin-left: 0px;
+    border: 1px solid black;
+    text-transform: capitalize;
+    border-radius: 30px;
+    margin-top: 7px;
+    padding: 0px 10px;
+    height: 20px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: inline;
+    line-height: 20px;
+}
+
+/* Mother for Drinks and Content */
+.Mother {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Drinks Styles */
+.Drinks {
+    width: 10%;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    padding-left: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.Drinks h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-left: 30%;
+}
+
+.Drinks ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.Drinks ul li {
+    margin: 10px 0;
+    padding-left: 0;
+    
+}
+
+.Drinks ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    /* padding: 10px; */
+    text-align: center;
+    padding-left: 0px;
+    transition: background 0.3s ease;
+    
+    /* padding-inline-start: 0px; */
+}
+
+.Drinks ul li a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Main Content Area */
+.Categories {
+    width: 80%;
+    padding: 40px;
+    
+    background-color: #fff;
+}
+
+.Categories section {
+    margin-bottom: 40px;
+}
+
+.Categories h2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.Categories p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 50%;
+}
+
+/* Horizontal Line */
+hr {
+    border: 0;
+    border-top: 3px solid #82cffc;
+}
+

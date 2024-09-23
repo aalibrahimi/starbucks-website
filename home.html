@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .Mother {
+            display: flex;
+        }
+        .Drinks {
+            width: 200px;
+            padding: 20px;
+        }
+        .Categories {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav id="dashboard">
+        <a id="logo" href="home.html"><img src="star.png" alt=""></a> 
+        <a href="home.html">Menu</a>
+        <a href="Rewards.html" >Rewards</a>
+        <a href="Gift.html">Gift Cards</a>
+        <a id='find' href="https://www.starbucks.com/store-locator?map=39.635307,-101.337891,5z">Find Store</a>
+        <a id='sign' href="sign">Sign In</a>
+        <a id= 'join' href="join">Join</a>
+
+    </nav>
+    <hr>
+    <div class="Mother">
+        <div class="Drinks">
+            <h2>Drinks</h2>
+            <ul>
+                <li><a href="#" onclick="showSection('iced-coffee'); return false;">Iced Coffee</a></li>
+                <li><a href="#" onclick="showSection('hot-coffee'); return false;">Hot Coffee</a></li>
+                <li><a href="#" onclick="showSection('tea'); return false;">Tea</a></li>
+                <li><a href="#" onclick="showSection('frappuccino'); return false;">Frappuccino</a></li>
+                <li><a href="#" onclick="showSection('refreshers'); return false;">Starbucks Refreshers</a></li>
+            </ul>
+        </div>
+
+        <div class="Categories">
+            <div id="iced-coffee" class="content-section">
+                <h2>Iced Coffee</h2>
+                <p>A range of refreshing iced coffee options...</p>
+            </div>
+
+            <div id="hot-coffee" class="content-section">
+                <h2>Hot Coffee</h2>
+                <p>Hot, energizing coffees to warm your soul...</p>
+            </div>
+
+            <div id="tea" class="content-section">
+                <h2>Tea</h2>
+                <p>Relax with a variety of soothing teas...</p>
+            </div>
+
+            <div id="frappuccino" class="content-section">
+                <h2>Frappuccino</h2>
+                <p>Our creamy, blended drinks, available in a range of flavors...</p>
+            </div>
+
+            <div id="refreshers" class="content-section">
+                <h2>Starbucks Refreshers</h2>
+                <p>Light, refreshing beverages with real fruit juice...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.getElementsByClassName('content-section');
+            for (let section of sections) {
+                section.classList.remove('active');
+            }
+            
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+
+        // Show the first section by default
+        showSection('iced-coffee');
+    </script>
+</body>
+</html>
