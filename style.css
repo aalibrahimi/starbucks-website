@@ -1,41 +1,54 @@
-html {
-    scroll-behavior: smooth;
+
+:root{
+    --bck-color: rgb(19, 18, 21);
+    --dark-mode: rgb(7, 7, 7);
+    --light-mode:  rgb(249, 131, 151);;
+    --font-size: 16px;
+
+
 }
 /* Body Styles */
-body {
-    background-color: pink;
-    font-size: 10px;
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--bck-color);
+    font-size: 16px;
     color: #000;
     font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+    flex: 1;
 }
 
 /* Dashboard (Navigation) */
-#dashboard img {
-   height: 2.5rem;
+.page-content #dashboard img {
+   height: 3.7rem;
    
 }
 
-#dashboard {
+.page-content #dashboard {
     display: flex;
     justify-content: space-around; /* Distributes space between items */
     align-items: center;
     padding: 1rem;
     max-width: 1200px;
-    margin: 0, auto;
+    margin: 10, auto;
    
 }
 
 /* Navigation Links */
-#dashboard a {
+.page-content #dashboard a {
     margin-top: 20px 0px;
     text-decoration: none;
-    color: rgb(38, 37, 37);
+    color: var(--light-mode);
     font-weight: 700;
-    font-size: 10px;
-    margin-right: 0%;
+    font-size: 16px;
+    margin-right: 8%;
     width: 40%;
-    padding: 0.5rem, 1rem;
+    
     letter-spacing: 0.0875rem;
     display: flex;
     align-items: center;
@@ -44,19 +57,23 @@ body {
 }
 
 /* "Sign In" Button */
-#dashboard #sign {
-    margin-right: 0px;
-    margin-left: 0px;
-    border: 1px solid black;
+.page-content #dashboard #sign, #dashboard #join {
+    margin-right: 3%;
+    margin-left: 20%;
+    border: 1px solid var(--dark-mode);
     text-transform: capitalize;
     border-radius: 30px;
-    margin-top: 7px;
+    margin-top: 2px;
     padding: 0px 10px;
     height: 20px;
     width: 40px;
     text-align: center;
     display: inline;
     line-height: 20px;
+}
+.page-content #dashboard #join{
+    margin-left: 10px;
+
 }
 
 /* Hover Effects for Sign and Join */
@@ -76,20 +93,8 @@ body {
 
 /* "Join" Button */
 #dashboard #join {
-    margin-right: 0px;
-    margin-left: 0px;
-    border: 1px solid black;
-    text-transform: capitalize;
-    border-radius: 30px;
-    margin-top: 7px;
-    padding: 0px 10px;
-    height: 20px;
-    width: 40px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    display: inline;
-    line-height: 20px;
+    background-color: var(--dark-mode);
+    /* color: white; */
 }
 
 /* Mother for Drinks and Content */
@@ -98,22 +103,133 @@ body {
     min-height: 100vh;
 }
 
+.content-section{
+    width: 100%;
+    height: 200px;
+
+}
+h2{
+    color: rgb(249, 131, 151);
+}
+.Categories .content-section h2 {
+    color: rgb(249, 131, 151);
+}
+.iced-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0px;
+    /* background-color: var(--light-mode); */
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 0px;
+    height: auto;  
+}
+
+.Categories .iced-container img{
+   
+    height: 15.5rem;
+    width: 15.5rem;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
+    
+    
+    
+   
+}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+#refreshing-options {
+    font-family: 'Fredoka One', cursive;
+    font-size: 22px;
+    text-decoration: line-through;
+    text-align: center;
+    color: #ff85a2;
+    background: linear-gradient(45deg, #ffd1dc, #ff85a2, #ffa07a);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-fill-color: transparent; */
+    animation: rainbow-text 4s ease infinite;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+    letter-spacing: 2px;
+    margin: 20px 0;
+    padding: 10px;
+    position: relative;
+}
+img:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+
+}
+.iced-container p {
+    font-size: 12px;
+    color: var(--bck-color);
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+
+
+.iced-container p:hover {
+    color: #00704A; /* Starbucks green color on hover */
+    cursor: pointer;
+}
+
+#refreshing-options::before {
+    content: "✿";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #ffa07a;
+}
+
+#refreshing-options::after {
+    content: "✿";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+    font-size: 1.2em;
+    color: #ffa07a;
+}
+
+@keyframes rainbow-text {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.Mother img{
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+    
+}
 /* Drinks Styles */
-.Drinks {
-    width: 10%;
+.page-content .Mother .Drinks {
+    width: 15%;
     background-color: #2c3e50;
     color: #fff;
     padding: 20px;
     padding-left: 0;
     position: sticky;
+    
     top: 0;
     height: 100vh;
 }
 
 .Drinks h2 {
-    font-size: 14px;
-    margin-bottom: 20px;
-    padding-left: 30%;
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .Drinks ul {
@@ -130,8 +246,9 @@ body {
 .Drinks ul li a {
     color: #ecf0f1;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 17px;
     display: block;
+    margin-bottom: 20px;
     /* padding: 10px; */
     text-align: center;
     padding-left: 0px;
@@ -147,7 +264,7 @@ body {
 
 /* Main Content Area */
 .Categories {
-    width: 80%;
+    width: 100%;
     padding: 40px;
     
     background-color: #fff;
@@ -158,14 +275,15 @@ body {
 }
 
 .Categories h2 {
-    font-size: 17px;
+    font-size: 30px;
+    text-align: center;
     margin-bottom: 10px;
     color: #2c3e50;
 }
 
 .Categories p {
     font-size: 18px;
-    color: #7f8c8d;
+    color: var(--dark-mode);
     margin-bottom: 50%;
 }
 
@@ -175,3 +293,74 @@ hr {
     border-top: 3px solid #82cffc;
 }
 
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar {
+    background: none;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--light-mode);
+    border-radius: 30px;
+    margin-right: 20px;
+    
+    
+    
+}
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.Mother {
+    display: flex;
+    flex: 1;
+}
+.Drinks {
+    width: 150px;
+    padding: 20px;
+}
+.Categories {
+    flex-grow: 1;
+    padding: 20px;
+}
+.content-section {
+    display: none;
+}
+.content-section.active {
+    display: block;
+}
+
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: var(--light-mode);
+    color: white;
+    padding: 60px 40px;
+    height: 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text if needed */
+    text-align: center;      /* Ensures the text inside is centered */
+    width: 100%;             /* Ensures the flexbox container spans the full width */
+    height: 100px;           /* Adjust the height of the footer as needed */
+    margin: 0 auto;          /* Centers the content based on width */
+}
+
+.footer-content p {
+    margin: 0; /* Ensure no extra margin on the text */
+}
+#copy-rights {
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0;
+    background-color: var(--light-mode);
+    color: white;
+    padding: 10px 0;
+}

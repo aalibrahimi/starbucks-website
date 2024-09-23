@@ -26,7 +26,8 @@
     </style>
 </head>
 <body>
-    <nav id="dashboard">
+    <div class="page-content">
+        <nav id="dashboard">
         <a id="logo" href="home.html"><img src="star.png" alt=""></a> 
         <a href="home.html">Menu</a>
         <a href="Rewards.html" >Rewards</a>
@@ -49,49 +50,29 @@
             </ul>
         </div>
 
-        <div class="Categories">
-            <div id="iced-coffee" class="content-section">
-                <h2>Iced Coffee</h2>
-                <p>A range of refreshing iced coffee options...</p>
-            </div>
+<div class="Categories">
+    <div id="iced-coffee" class="content-section"></div>
+    <div id="hot-coffee" class="content-section"></div>
+    <div id="tea" class="content-section"></div>
+    <div id="frappuccino" class="content-section"></div>
+    <div id="refreshers" class="content-section"></div>
+</div>
 
-            <div id="hot-coffee" class="content-section">
-                <h2>Hot Coffee</h2>
-                <p>Hot, energizing coffees to warm your soul...</p>
-            </div>
-
-            <div id="tea" class="content-section">
-                <h2>Tea</h2>
-                <p>Relax with a variety of soothing teas...</p>
-            </div>
-
-            <div id="frappuccino" class="content-section">
-                <h2>Frappuccino</h2>
-                <p>Our creamy, blended drinks, available in a range of flavors...</p>
-            </div>
-
-            <div id="refreshers" class="content-section">
-                <h2>Starbucks Refreshers</h2>
-                <p>Light, refreshing beverages with real fruit juice...</p>
-            </div>
-        </div>
     </div>
+</div>
     
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.getElementsByClassName('content-section');
-            for (let section of sections) {
-                section.classList.remove('active');
-            }
-            
-            // Show the selected section
-            const selectedSection = document.getElementById(sectionId);
-            selectedSection.classList.add('active');
-        }
-
-        // Show the first section by default
-        showSection('iced-coffee');
-    </script>
+<!-- footer -->
+<footer class="footer">
+        <div class="footer-content">
+            <!-- <img id="bio-logo" src="./pics/freieren.png" alt="freieren"> -->
+            <p id="bio"> 
+                Starbuck Summer Sales!!
+    
+            </p>
+        </div>
+    </footer>
+    <p id="copy-rights">All Rights Reserved @Silent Rain</p>
+<!-- javascript -->
+    <script src="./static/javascripto.js"></script>
 </body>
 </html>
